@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Salesforce 2026 AI 功能专页</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav" aria-label="主导航">
+        <a class="brand" href="index.html" aria-label="Salesforce 2026 新功能">
+          <span class="brand-mark">SF</span>
+          <span>2026 新功能</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">全部功能</a>
+          <a href="ai.html" aria-current="page">AI 功能</a>
+          <a href="#sources">来源</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-inner">
+          <div>
+            <p class="eyebrow">Agentforce, Einstein, Tableau, Data 360</p>
+            <h1>Salesforce AI 功能专页</h1>
+            <p class="lead">这里单独汇总 2026 年以来 Salesforce 官方发布清单中与 AI 相关的能力，覆盖 Agentforce、多 agent 编排、AI 驱动销售与服务、智能数据上下文、行业 AI、Slack 工作流和 Tableau 分析智能。</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#agentforce">Agentforce 平台</a>
+              <a class="button" href="#business-ai">业务 AI</a>
+              <a class="button" href="index.html">返回全部功能</a>
+            </div>
+          </div>
+          <img class="hero-visual" src="assets/salesforce-release-map.svg" alt="Salesforce AI 能力地图">
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="ai-layout">
+          <aside class="side-panel">
+            <p class="eyebrow">AI Focus</p>
+            <h2>本页覆盖范围</h2>
+            <p>收录标准：功能名称或官方说明中明确涉及 Agentforce、AI agents、预测式 AI、语音 AI、智能搜索、AI 驱动提醒、agentic 工作流、Tableau MCP 或 AI-first 体验。</p>
+            <div class="pill-list">
+              <span class="tag ai">Agentforce</span>
+              <span class="tag ai">AI agents</span>
+              <span class="tag data">Data 360</span>
+              <span class="tag data">Tableau</span>
+              <span class="tag ops">Slack</span>
+              <span class="tag security">Trust Layer</span>
+            </div>
+          </aside>
+
+          <div>
+            <div id="agentforce" class="section-header">
+              <div>
+                <p class="eyebrow">Core agent platform</p>
+                <h2>Agentforce 与 agent 平台能力</h2>
+              </div>
+            </div>
+            <div class="release-grid">
+              <article class="feature-card">
+                <span class="rank">01</span>
+                <div>
+                  <h3>Multi-Agent Orchestration in Agentforce</h3>
+                  <p>Summer ’26：多个 agents 共享上下文、协作处理复杂端到端工作流。</p>
+                  <div class="tags"><span class="tag ai">编排</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">02</span>
+                <div>
+                  <h3>Agentforce Builder</h3>
+                  <p>Spring ’26：在对话式工作区中构建、测试、优化生产级 agents，支持低代码与脚本视图。</p>
+                  <div class="tags"><span class="tag ai">构建工具</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">03</span>
+                <div>
+                  <h3>Agentic Enterprise Search</h3>
+                  <p>Spring ’26：基于 Data 360 理解 200 多个外部源上下文，并协调多个 AI agents 直接执行任务。</p>
+                  <div class="tags"><span class="tag ai">企业搜索</span><span class="tag data">Data 360</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">04</span>
+                <div>
+                  <h3>Agentic Setup and Data Management</h3>
+                  <p>Spring ’26 公布、官方注释显示 GA 在 Summer ’26：用自然语言和智能建议编排 Data 360 数据管道。</p>
+                  <div class="tags"><span class="tag ai">数据 agent</span><span class="tag data">Data 360</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">05</span>
+                <div>
+                  <h3>IT Service Domain Pack Enhancements</h3>
+                  <p>Summer ’26：50 多个 IT 服务 AI agents 开箱即用，覆盖 Slack、Teams 与 IT Service Desk。</p>
+                  <div class="tags"><span class="tag ai">IT agents</span><span class="tag ops">员工服务</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">06</span>
+                <div>
+                  <h3>Agentforce Self-Service</h3>
+                  <p>Summer ’26：Help Agent 与 agent-first Portal 体验，让客户用对话方式更快自助解决问题。</p>
+                  <div class="tags"><span class="tag ai">自助服务</span><span class="tag ops">客户体验</span></div>
+                </div>
+              </article>
+            </div>
+
+            <div id="business-ai" class="section-header" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">Business workflows</p>
+                <h2>销售、服务、营销与收入 AI</h2>
+              </div>
+            </div>
+            <div class="release-grid">
+              <article class="feature-card">
+                <span class="rank">07</span>
+                <div>
+                  <h3>Sales Workspace</h3>
+                  <p>AI 驱动的销售工作中心，把 agents、预测洞察、优先级和下一步行动集中给销售代表。</p>
+                  <div class="tags"><span class="tag ai">销售 AI</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">08</span>
+                <div>
+                  <h3>Account Management</h3>
+                  <p>Agentforce 自动完成账户研究并生成摘要、洞察和下一步建议。</p>
+                  <div class="tags"><span class="tag ai">账户研究</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">09</span>
+                <div>
+                  <h3>Prospecting</h3>
+                  <p>Agentforce 24/7 寻找和排序潜在客户，并在 CRM 与 Slack 中同步结果。</p>
+                  <div class="tags"><span class="tag ai">线索开发</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">10</span>
+                <div>
+                  <h3>Customer Engagement Agent</h3>
+                  <p>独立进行网站与邮件对话，持续资格审核买家并把高意向线索交给销售。</p>
+                  <div class="tags"><span class="tag ai">客户互动</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">11</span>
+                <div>
+                  <h3>Momentum</h3>
+                  <p>结构化销售互动数据，形成 Agentforce Sales 需要的真实交易上下文。</p>
+                  <div class="tags"><span class="tag ai">销售上下文</span><span class="tag data">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">12</span>
+                <div>
+                  <h3>Slack First Sales</h3>
+                  <p>让销售在 Slack 中获得 CRM 上下文和对话式 AI，并由 Agentforce Sales 主动推进管道。</p>
+                  <div class="tags"><span class="tag ai">Slack</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">13</span>
+                <div>
+                  <h3>Proactive Service</h3>
+                  <p>提前检测客户问题、扩大自助解决并降低工单升级。</p>
+                  <div class="tags"><span class="tag ai">服务 AI</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">14</span>
+                <div>
+                  <h3>Conversational Email</h3>
+                  <p>由自主 AI agents 把邮件从单向广播变成双向客户对话。</p>
+                  <div class="tags"><span class="tag ai">邮件 AI</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">15</span>
+                <div>
+                  <h3>Real-Time Offer Management</h3>
+                  <p>根据动态行为提供个性化优惠，并通过智能洞察与归因闭环优化营销。</p>
+                  <div class="tags"><span class="tag ai">个性化营销</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">16</span>
+                <div>
+                  <h3>Collections with Agentforce</h3>
+                  <p>用预测式 AI 给发票风险评分，由 Agentforce 推荐风险分层催收计划。</p>
+                  <div class="tags"><span class="tag ai">回款 AI</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+            </div>
+
+            <div id="data-ai" class="section-header" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">Data and analytics AI</p>
+                <h2>数据、Tableau 与搜索智能</h2>
+              </div>
+            </div>
+            <div class="release-grid">
+              <article class="feature-card">
+                <span class="rank">17</span>
+                <div>
+                  <h3>Tableau MCP</h3>
+                  <p>让 AI agents 查询 Tableau 分析引擎，用业务上下文给出可信答案，并由 Agentforce Trust Layer 保护数据。</p>
+                  <div class="tags"><span class="tag data">Tableau</span><span class="tag ai">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">18</span>
+                <div>
+                  <h3>Retail Execution Dashboards for Tableau Next</h3>
+                  <p>把零售门店执行数据变成可行动洞察，让总部和外勤团队更快发现绩效缺口。</p>
+                  <div class="tags"><span class="tag data">Tableau Next</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">19</span>
+                <div>
+                  <h3>Customer Signals in Command Center</h3>
+                  <p>统一监控客户信号、服务人员和 AI 表现，给服务运营一个更清晰的事实源。</p>
+                  <div class="tags"><span class="tag data">客户信号</span><span class="tag ai">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">20</span>
+                <div>
+                  <h3>Smart Content Search for Life Sciences</h3>
+                  <p>用演示与文档中的概念快速检索内容，帮助医药与医疗科技代表减少搜索时间。</p>
+                  <div class="tags"><span class="tag ai">智能搜索</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+            </div>
+
+            <div id="industry-ai" class="section-header" style="margin-top: 58px;">
+              <div>
+                <p class="eyebrow">Industry and field AI</p>
+                <h2>行业、现场与语音 AI</h2>
+              </div>
+            </div>
+            <div class="release-grid">
+              <article class="feature-card">
+                <span class="rank">21</span>
+                <div>
+                  <h3>Agentforce Voice for Financial Services</h3>
+                  <p>在金融服务语音渠道中部署 AI agents，处理常见银行与催收咨询。</p>
+                  <div class="tags"><span class="tag ai">金融语音 AI</span><span class="tag security">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">22</span>
+                <div>
+                  <h3>Voice to Form</h3>
+                  <p>移动员工通过语音完成复杂表单，提升数据录入速度与准确性。</p>
+                  <div class="tags"><span class="tag ai">语音输入</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">23</span>
+                <div>
+                  <h3>Scheduling Console</h3>
+                  <p>Agentforce 自动推荐最近且合格的技术人员，帮助调度团队处理紧急工作。</p>
+                  <div class="tags"><span class="tag ai">现场服务</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">24</span>
+                <div>
+                  <h3>Integrated Care Management Enhancements</h3>
+                  <p>医疗评估表单中加入 AI 建议和自动填充，减少人工录入和表单放弃。</p>
+                  <div class="tags"><span class="tag ai">Healthcare</span><span class="tag ops">Spring ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">25</span>
+                <div>
+                  <h3>Briefings</h3>
+                  <p>为生命科学外勤角色生成每日音频摘要，聚合 HCP 账户上下文并支持离线使用。</p>
+                  <div class="tags"><span class="tag ai">音频 AI</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">26</span>
+                <div>
+                  <h3>Warranty Claims Assistance</h3>
+                  <p>用 AI 自动处理保修有效性和理赔状态，让服务团队聚焦复杂事项。</p>
+                  <div class="tags"><span class="tag ai">保修自动化</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+              <article class="feature-card">
+                <span class="rank">27</span>
+                <div>
+                  <h3>Slack for Education</h3>
+                  <p>把学生洞察和 AI 驱动提醒带进 Slack，帮助学校团队主动支持学生成功。</p>
+                  <div class="tags"><span class="tag ai">教育提醒</span><span class="tag ops">Summer ’26</span></div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sources" class="section">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Sources</p>
+            <h2>信息来源</h2>
+          </div>
+          <p class="section-note">AI 专页基于 Salesforce 官方 Spring ’26 和 Summer ’26 发布新闻稿筛选整理。</p>
+        </div>
+        <div class="source-list">
+          <article class="source-item">
+            <h3>Spring ’26 Product Release</h3>
+            <p>包含 Sales Workspace、Proactive Service、Conversational Email、Agentic Setup、Agentforce Builder、Agentic Enterprise Search 等 AI 能力。</p>
+            <a href="https://www.salesforce.com/news/stories/spring-2026-product-release-announcement/" target="_blank" rel="noreferrer">打开官方新闻稿</a>
+          </article>
+          <article class="source-item">
+            <h3>Summer ’26 Product Release</h3>
+            <p>包含 Multi-Agent Orchestration、IT Service Domain Pack、Tableau MCP、Agentforce Self-Service、Customer Engagement Agent 等 AI 能力。</p>
+            <a href="https://www.salesforce.com/news/stories/summer-2026-product-release-announcement/" target="_blank" rel="noreferrer">打开官方新闻稿</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>截至日期：2026 年 5 月 24 日。功能说明为中文摘要，具体可用性、授权和区域限制请以 Salesforce 官方文档为准。</p>
+    </footer>
+  </body>
+</html>
