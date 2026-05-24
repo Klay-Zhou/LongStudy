@@ -5,6 +5,8 @@
 ## 页面
 
 - `index.html`：Salesforce Spring '26 / Summer '26 新功能总览
+- `summer26.html`：Salesforce Summer '26 新功能清单
+- `spring26.html`：Salesforce Spring '26 新功能清单
 - `ai.html`：Salesforce AI、Agentforce、Tableau MCP、AI agents 相关功能专页
 
 ## GitHub Pages 发布方式
@@ -35,6 +37,8 @@ http://localhost:4173/
 ```text
 .
 ├── index.html
+├── summer26.html
+├── spring26.html
 ├── ai.html
 ├── styles.css
 ├── assets/

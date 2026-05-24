@@ -354,6 +354,54 @@ h2 {
   padding-bottom: 84px;
 }
 
+.compact-hero .hero-inner {
+  min-height: 440px;
+}
+
+.choice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.choice-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 230px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 8px 26px rgba(16, 36, 56, 0.07);
+  color: var(--ink);
+}
+
+.choice-card:hover {
+  border-color: #9acbed;
+  text-decoration: none;
+  transform: translateY(-2px);
+  transition: transform 140ms ease, border-color 140ms ease;
+}
+
+.choice-kicker {
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.choice-card strong {
+  margin-top: 18px;
+  font-size: 27px;
+  line-height: 1.1;
+}
+
+.choice-card p {
+  margin: 16px 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .source-item {
   padding: 22px;
   border: 1px solid var(--line);
@@ -391,6 +439,7 @@ h2 {
 
   .metric-strip,
   .release-grid,
+  .choice-grid,
   .source-list {
     grid-template-columns: 1fr;
   }
