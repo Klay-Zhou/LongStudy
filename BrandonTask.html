@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>北辰幼儿园作业整理</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f4f7f5;
+      color: #232a2f;
+      font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans CJK SC", Arial, sans-serif;
+      letter-spacing: 0;
+    }
+
+    .poster {
+      width: 100%;
+      max-width: 100%;
+      min-height: 100vh;
+      padding: 34px 34px 42px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.86)),
+        #f4f7f5;
+    }
+
+    .hero {
+      padding: 26px 26px 24px;
+      background: #ffffff;
+      border: 1px solid #dfe7df;
+      border-radius: 18px;
+      box-shadow: 0 12px 28px rgba(29, 60, 50, 0.08);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.18;
+      font-weight: 800;
+      color: #15241f;
+    }
+
+    .subtitle {
+      margin-top: 12px;
+      font-size: 22px;
+      line-height: 1.45;
+      color: #5a6660;
+    }
+
+    .legend {
+      display: flex;
+      gap: 12px;
+      margin-top: 22px;
+      flex-wrap: wrap;
+    }
+
+    .legend span {
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: #eef4ef;
+      color: #53625b;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .section {
+      margin-top: 26px;
+      padding: 22px 20px 20px;
+      background: #ffffff;
+      border-radius: 18px;
+      border: 1px solid #e1e8e3;
+      box-shadow: 0 10px 24px rgba(29, 60, 50, 0.06);
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 18px;
+      font-size: 30px;
+      line-height: 1.2;
+      font-weight: 800;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 88px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: 800;
+    }
+
+    .math .tag { background: #2f7d5f; }
+    .pinyin .tag { background: #3d6fa8; }
+    .literacy .tag { background: #a85a3d; }
+    .english .tag { background: #6b5aa8; }
+    .carry .tag { background: #6a7470; }
+
+    .count {
+      color: #7b8781;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 14px;
+      padding: 18px 0;
+      border-top: 1px solid #edf1ee;
+    }
+
+    .item:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    .date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70px;
+      border-radius: 14px;
+      background: #f0f5f1;
+      color: #20322a;
+      font-weight: 800;
+    }
+
+    .date .day {
+      font-size: 24px;
+      line-height: 1.1;
+    }
+
+    .date .week {
+      margin-top: 4px;
+      font-size: 16px;
+      color: #6b766f;
+    }
+
+    .content {
+      min-width: 0;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 28px 1fr;
+      align-items: start;
+      gap: 10px;
+      margin: 0;
+      font-size: 24px;
+      line-height: 1.48;
+      font-weight: 700;
+      color: #1f2824;
+    }
+
+    .task-check {
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      margin: 5px 0 0;
+      border: 2.5px solid #7d8a83;
+      border-radius: 6px;
+      background: #ffffff;
+      cursor: pointer;
+    }
+
+    .task-check:checked {
+      background: #2f7d5f;
+      border-color: #2f7d5f;
+      position: relative;
+    }
+
+    .task-check:checked::after {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 2px;
+      width: 7px;
+      height: 13px;
+      border: solid #ffffff;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    .task-text {
+      min-width: 0;
+    }
+
+    .note {
+      margin: 8px 0 0;
+      font-size: 20px;
+      line-height: 1.45;
+      color: #526058;
+    }
+
+    .muted {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #f4f5f3;
+      color: #8a928d;
+      font-size: 18px;
+      line-height: 1.42;
+      font-weight: 500;
+    }
+
+    .important {
+      color: #b13d2e;
+      font-weight: 800;
+    }
+
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+      color: #7a847e;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .poster {
+        padding: 22px 18px 28px;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+
+      .subtitle {
+        font-size: 19px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .tag {
+        min-width: 76px;
+        padding: 7px 14px;
+        font-size: 18px;
+      }
+
+      .main {
+        font-size: 20px;
+      }
+
+      .note,
+      .muted {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .poster {
+        padding: 14px 10px 20px;
+      }
+
+      .hero,
+      .section {
+        padding-left: 14px;
+        padding-right: 14px;
+        border-radius: 14px;
+      }
+
+      h1 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .legend span {
+        font-size: 14px;
+        padding: 7px 11px;
+      }
+
+      .section-title {
+        align-items: start;
+        flex-direction: column;
+        gap: 8px;
+        font-size: 22px;
+      }
+
+      .count {
+        font-size: 14px;
+      }
+
+      .item {
+        grid-template-columns: 74px 1fr;
+        gap: 10px;
+        padding: 14px 0;
+      }
+
+      .date {
+        min-height: 62px;
+        border-radius: 12px;
+      }
+
+      .date .day {
+        font-size: 18px;
+      }
+
+      .date .week {
+        font-size: 13px;
+      }
+
+      .main {
+        grid-template-columns: 24px 1fr;
+        gap: 8px;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .task-check {
+        width: 20px;
+        height: 20px;
+        margin-top: 3px;
+      }
+
+      .task-check:checked::after {
+        left: 5px;
+        top: 1px;
+        width: 5px;
+        height: 10px;
+      }
+
+      .note,
+      .muted,
+      .footer {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="poster">
+    <section class="hero">
+      <h1>北辰幼儿园作业整理</h1>
+      <div class="subtitle">仅保留作业、复习、改错和带书事项。数学排在最前，已完成或无作业内容已弱化显示。</div>
+      <div class="legend">
+        <span>数学优先</span>
+        <span>按学科分区</span>
+        <span>适合微信长图</span>
+      </div>
+    </section>
+
+    <section class="section math">
+      <h2 class="section-title"><span class="tag">数学</span><span class="count">按时间排序</span></h2>
+
+      <article class="item">
+        <div class="date"><span class="day">05-13</span><span class="week">周三</span></div>
+        <div class="content">
+          <p class="main">数学《100以内数的认识》。</p>
+          <div class="muted">主课本 + 同步练习册已在幼儿园完成。</div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-15</span><span class="week">周五</span></div>
+        <div class="content">
+          <p class="main">完成数学同步练习册《认识人民币》。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-20</span><span class="week">周三</span></div>
+        <div class="content">
+          <p class="main">数学《100以内数的认识》。</p>
+          <div class="muted">无作业，幼儿已全部在学校完成。</div>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-27</span><span class="week">周三</span></div>
+        <div class="content">
+          <p class="main">完成数学主课本第 <span class="important">73、74、75、76</span> 页；完成同步练习册第 <span class="important">71、72</span> 页。</p>
+          <p class="note">数学主课本改错：15、9、8、16、21。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section pinyin">
+      <h2 class="section-title"><span class="tag">拼音</span><span class="count">测试卷与练习册</span></h2>
+
+      <article class="item">
+        <div class="date"><span class="day">05-14</span><span class="week">周四</span></div>
+        <div class="content">
+          <p class="main">同步测试卷《an、en、in》做完。</p>
+          <p class="note">明日带书：识字主课本 + 同步练习册。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-18</span><span class="week">周一</span></div>
+        <div class="content">
+          <p class="main">拼音同步测试卷第 <span class="important">11、12</span> 页。</p>
+          <p class="note">少部分幼儿已完成，大部分需要回家完成。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-21</span><span class="week">周四</span></div>
+        <div class="content">
+          <p class="main">个别幼儿未完成拼音《un》同步练习册，家长监督完成。</p>
+          <p class="note">明日带书：识字测试卷。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-28</span><span class="week">周四</span></div>
+        <div class="content">
+          <p class="main">完成试卷《前鼻韵母 un、ün》第 <span class="important">13、14</span> 页。</p>
+          <p class="note">明天带书：识字同步测试卷。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section literacy">
+      <h2 class="section-title"><span class="tag">识字</span><span class="count">书写与测试卷</span></h2>
+
+      <article class="item">
+        <div class="date"><span class="day">05-15</span><span class="week">周五</span></div>
+        <div class="content">
+          <p class="main">完成识字同步练习册《汉字歌》。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-19</span><span class="week">周二</span></div>
+        <div class="content">
+          <p class="main">识字《复习五》个别幼儿未完成，按老师提示补完。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-22</span><span class="week">周五</span></div>
+        <div class="content">
+          <p class="main">完成识字同步练习册第 <span class="important">23</span> 页：七、电、包。</p>
+          <p class="note">周一带书：拼音主课本 + 同步练习册。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-26</span><span class="week">周二</span></div>
+        <div class="content">
+          <p class="main">完成识字同步测试卷第 <span class="important">23、24</span> 页。</p>
+          <p class="note">明天带书：数学主课本 + 同步测试卷。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-29</span><span class="week">周五</span></div>
+        <div class="content">
+          <p class="main">在生字本上写“队、阳、邻”，一个字三行，带拼音。</p>
+          <p class="note">带书：识字同步测试卷。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section english">
+      <h2 class="section-title"><span class="tag">英语</span><span class="count">以复习为主</span></h2>
+
+      <article class="item">
+        <div class="date"><span class="day">05-13</span><span class="week">周三</span></div>
+        <div class="content">
+          <p class="main">回家复习 Unit9 单词、句型和 Cc、Gg 自然拼读。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-18</span><span class="week">周一</span></div>
+        <div class="content">
+          <p class="main">复习 Unit7-Unit9 重点单词、句型；复习 Ll、Rr、Mm、Nn、Cc、Gg 的发音及代表单词。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-20</span><span class="week">周三</span></div>
+        <div class="content">
+          <p class="main">复习 Unit10 新单词和句型。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-22</span><span class="week">周五</span></div>
+        <div class="content">
+          <p class="main">复习 Unit10 单词、句型和 Hh、Ww 自然拼读。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-25</span><span class="week">周一</span></div>
+        <div class="content">
+          <p class="main">复习 Unit10 句型和 wh 发音。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-28</span><span class="week">周四</span></div>
+        <div class="content">
+          <p class="main">复习 Unit11 新单词和句型。</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="section carry">
+      <h2 class="section-title"><span class="tag">补带</span><span class="count">与作业直接相关</span></h2>
+
+      <article class="item">
+        <div class="date"><span class="day">05-17</span><span class="week">周日</span></div>
+        <div class="content">
+          <p class="main">带好假期作业；明天带书：拼音同步测试卷。</p>
+        </div>
+      </article>
+
+      <article class="item">
+        <div class="date"><span class="day">05-26</span><span class="week">周二</span></div>
+        <div class="content">
+          <p class="main">识字同步测试卷未带：15、2、21、3、20、16。</p>
+          <p class="note">认养牌未带：5、18、1、15、9、21、20。</p>
+        </div>
+      </article>
+    </section>
+
+    <div class="footer">整理自 5 月 13 日至 5 月 29 日班级通知图片</div>
+  </main>
+  <script>
+    document.querySelectorAll(".main").forEach((item, index) => {
+      if (item.querySelector(".task-check")) return;
+      const content = document.createElement("span");
+      content.className = "task-text";
+      while (item.firstChild) {
+        content.appendChild(item.firstChild);
+      }
+
+      const checkbox = document.createElement("input");
+      checkbox.className = "task-check";
+      checkbox.type = "checkbox";
+      checkbox.setAttribute("aria-label", `完成作业 ${index + 1}`);
+
+      item.appendChild(checkbox);
+      item.appendChild(content);
+    });
+  </script>
+  <script>
+    document.title = "BrandonTask";
+    (function () {
+      const pageTitle = document.querySelector(".hero h1");
+      if (pageTitle) {
+        pageTitle.textContent = "三亚旅游欠的债";
+      }
+
+      const storageKey = "longstudy:brandon-task:checks";
+
+      function loadCheckedState() {
+        try {
+          return JSON.parse(localStorage.getItem(storageKey)) || {};
+        } catch (error) {
+          return {};
+        }
+      }
+
+      function saveCheckedState(state) {
+        localStorage.setItem(storageKey, JSON.stringify(state));
+      }
+
+      const checkedState = loadCheckedState();
+      document.querySelectorAll(".task-check").forEach((checkbox, index) => {
+        const checkboxId = `task-${index + 1}`;
+        checkbox.checked = Boolean(checkedState[checkboxId]);
+        checkbox.setAttribute("aria-label", `Complete task ${index + 1}`);
+        checkbox.addEventListener("change", () => {
+          checkedState[checkboxId] = checkbox.checked;
+          saveCheckedState(checkedState);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
